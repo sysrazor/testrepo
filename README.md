@@ -10,7 +10,7 @@ The image creator utilizes Hashicorp's Packer product to create Global Payments 
 Packer is a tool for building identical machine images for multiple platforms
 from a single source configuration.
 
-
+## Overview
 
 ## Source Code Structure
 
@@ -100,7 +100,7 @@ $ packer build example.json
            <summary>OS JSON Break Down</summary>
            <p><ul> 
                 <li> <b>Builders:</b> Information and details of the VM to create. OS, compute sizing and network information
-                <li> <b>Provisioners:</b> Customizatizing the OS, Executing specified scripts from the scripts directory, copying files to the new VM and executing inline commands
+                <li> <b>Provisioners:</b> customizing the OS, Executing specified scripts from the scripts directory, copying files to the new VM and executing inline commands
   </ul>
   </p>
          </details>
