@@ -79,3 +79,10 @@ $ git clone https://github.com/YOUR-REPOSITORY
   },
 
 ```
+* Login Variables
+``` bash
+    "client_id": "",          <-- Azure SP account to perform API actions with
+    "client_secret": "",      <-- Azure SP password
+    "tenant_id": "",          <-- Azure Tenant ID
+    "subscription_id": "",    <-- Azure Subscription ID
+```
