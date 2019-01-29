@@ -97,7 +97,7 @@ Next, let's build the image from this template. With a properly validated templa
 $ packer build example.json
 ```
 <details>
-           <summary>rhel7lvm.private.json Break Down</summary>
+           <summary>OS JSON Break Down</summary>
            <p><ul> 
                 <li> <b>Builders:</b> Information and details of the VM to create. OS, compute sizing and network information
                 <li> <b>Provisioners:</b> Custimozing the OS, Executing specified scripts from the scripts directory, copying files to the new VM and executing inline commands
