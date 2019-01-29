@@ -86,3 +86,12 @@ $ git clone https://github.com/YOUR-REPOSITORY
     "tenant_id": "",          <-- Azure Tenant ID
     "subscription_id": "",    <-- Azure Subscription ID
 ```
+
+<details>
+           <summary>rhel7lvm.private.json Break Down</summary>
+           <p><ul> 
+                <li> <b>Builders:</b> Information and details of the VM to create. OS, compute sizing and network information
+                <li> <b>Provisioners:</b> Custimozing the OS, Executing specified scripts from the scripts directory, copying files to the new VM and executing inline commands
+  </ul>
+  </p>
+         </details>
