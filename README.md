@@ -16,31 +16,30 @@ from a single source configuration.
 
 ```bash
 ├── files
-│   ├── dhclient-enter-hooks                       <-- Description Here
-│   ├── gpn_name_resolution_fqdn.sh                <-- Description Here
-│   └── gpn_name_resolution_simple.sh              <-- Description Here
+│   ├── dhclient-enter-hooks                       <-- Dnamically generate the resolv.conf at 1st boot
+│   ├── gpn_name_resolution_fqdn.sh                <-- Script will override name resolution settings made by Google or Azure
+│   └── gpn_name_resolution_simple.sh              <-- Script will override name resolution settings made by Google or Azure
 │   
 ├── scripts 
-│   ├── add-disk.sh                                <-- Description Here
-│   ├── copy_image_to_gallery.bash                 <-- Description Here
-│   ├── create_mount_points.bash                   <-- Description Here
-│   ├── create_users.bash                          <-- Description Here
+│   ├── add-disk.sh                                <-- Add additional disks
+│   ├── copy_image_to_gallery.bash                 <-- Create snapshot to of packer image and copy to the image gallery
+│   ├── create_mount_points.bash                   <-- Create LVM mount points
+│   ├── create_users.bash                          <-- Create some local users for monitoring/security apps
 │   ├── create_vm.sh                               <-- Description Here
 │   ├── delete_vm.sh                               <-- Description Here
-│   ├── generate_dns.bash                          <-- Description Here
-│   ├── harden_os.bash                             <-- Description Here
+│   ├── generate_dns.bash                          <-- Add DNS to resolve.conf
+│   ├── harden_os.bash                             <-- Harden various aspects of the OS. 
 │   ├── image_gallery.bash                         <-- Description Here
-│   ├── install_packages.bash                      <-- Description Here
-│   ├── install_puppet.bash                        <-- Description Here
-│   ├── install_repos.bash                         <-- Description Here
-│   └── patch_vm.bash                              <-- Description Here
+│   ├── install_packages.bash                      <-- Install packages from repo
+│   ├── install_puppet.bash                        <-- Install puppet
+│   ├── install_repos.bash                         <-- Add GP repositories
+│   └── patch_vm.bash                              <-- Update and Patch VM
 │
-├── centos73.json                                  <-- Description Here
-├── Jenkinsfile                                    <-- Description Here
-├── Jenkinsfile.TEST                               <-- Description Here
-├── rhel7lvm.json                                  <-- Description Here
-├── rhel7lvm.private.json
-
+├── centos73.json                                  <-- Packer file to build CentOS 7 template
+├── Jenkinsfile                                    <-- Jenkins groovy script for packer and image gallery deployment
+├── Jenkinsfile.TEST                               <-- Jenkins test script for packer and image gallery deployment
+├── rhel7lvm.json                                  <-- Packer file to build basic RHEL 7
+├── rhel7lvm.private.json                          <-- Packer file to build GP RHEL 7
 
 ```
 
