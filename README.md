@@ -51,9 +51,31 @@ for those with a bit more patience. Otherwise, the quick start below
 will get you up and running quickly, at the sacrifice of not explaining some
 key points.
 
-First, [download a pre-built Packer
+* First, [download a pre-built Packer
 binary](https://www.packer.io/downloads.html) for your operating system or
 [compile Packer
 yourself](https://github.com/hashicorp/packer/blob/master/.github/CONTRIBUTING.md#setting-up-go-to-work-on-packer).
 
+* Install [GIT](https://git-scm.com/downloads) if you don't have it
 
+After your workstation is setup; clone the repo.
+
+**To clone the repository (CLI)**
+
+```bash
+$ git clone https://github.com/YOUR-REPOSITORY
+```
+
+### Configure variables in the `OS.json` file
+```json
+  "variables": {
+      "location": "eastus",                               <-- The Azure location where to build the VM
+      "compute_name":"rhel7-base-{{timestamp}}",          <-- The name of the template VM 
+      "resource_group_name":"rsg-azusenad-sys-01",        <-- Resource group to build the VM in
+      "vnet_resource_group_name":"rsg-azusenad-net-01",   <-- Virtual Network Resource Group where the vNet resides
+      "vnet_name":"us-east-dev",                          <-- Virtual Network for the VM to be built on
+      "vnet_subnet_name":"us-east-dev-tier2",             <-- vNet Subnet to use for an Ip address
+      "vm_size": "Standard_DS12_v2"                       <-- Azure VM size
+  },
+
+```
