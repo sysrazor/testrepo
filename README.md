@@ -87,6 +87,16 @@ $ git clone https://github.com/YOUR-REPOSITORY
     "subscription_id": "",    <-- Azure Subscription ID
 ```
 
+Before we take this template and build an image from it, let's validate the template by running packer validate example.json. This command checks the syntax as well as the configuration values to verify they look valid. The output should look similar to below, because the template should be valid. If there are any errors, this command will tell you.
+``` bash
+$ packer validate example.json
+Template validated successfully.
+```
+
+Next, let's build the image from this template. With a properly validated template, it is time to build the image. This is done by calling `packer build` with the template file. 
+``` bash
+$ packer build example.json
+```
 <details>
            <summary>rhel7lvm.private.json Break Down</summary>
            <p><ul> 
