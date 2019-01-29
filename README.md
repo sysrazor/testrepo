@@ -36,12 +36,24 @@ from a single source configuration.
 │   └── patch_vm.bash                              <-- Description Here
 │
 ├── centos73.json                                  <-- Description Here
-├── Jenkinsfile                                    <-- Packer template for Pipeline
-├── Jenkinsfile.TEST                               <-- Packer template for Pipeline
-├── rhel7lvm.json                                  <-- Packer template for Pipeline
+├── Jenkinsfile                                    <-- Description Here
+├── Jenkinsfile.TEST                               <-- Description Here
+├── rhel7lvm.json                                  <-- Description Here
 ├── rhel7lvm.private.json
 
 
 ```
 
 ## Quick Start
+**Note:** There is a great
+[introduction and getting started guide](https://www.packer.io/intro)
+for those with a bit more patience. Otherwise, the quick start below
+will get you up and running quickly, at the sacrifice of not explaining some
+key points.
+
+First, [download a pre-built Packer
+binary](https://www.packer.io/downloads.html) for your operating system or
+[compile Packer
+yourself](https://github.com/hashicorp/packer/blob/master/.github/CONTRIBUTING.md#setting-up-go-to-work-on-packer).
+
+
