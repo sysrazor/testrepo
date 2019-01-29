@@ -16,7 +16,7 @@ from a single source configuration.
 
 ```bash
 ├── files
-│   ├── dhclient-enter-hooks                       <-- Dnamically generate the resolv.conf at 1st boot
+│   ├── dhclient-enter-hooks                       <-- Dynamically generate the resolv.conf at 1st boot
 │   ├── gpn_name_resolution_fqdn.sh                <-- Script will override name resolution settings made by Google or Azure
 │   └── gpn_name_resolution_simple.sh              <-- Script will override name resolution settings made by Google or Azure
 │   
