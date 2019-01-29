@@ -67,14 +67,14 @@ $ git clone https://github.com/YOUR-REPOSITORY
 ```
 
 ### Configure variables in the `OS.json` file
-```json
+``` bash
   "variables": {
       "location": "eastus",                               <-- The Azure location where to build the VM
       "compute_name":"rhel7-base-{{timestamp}}",          <-- The name of the template VM 
-      "resource_group_name":"rsg-azusenad-sys-01",        <-- Resource group to build the VM in
+      "resource_group_name":"rsg-azusenad-sys-01",        <-- Resource group where to build the VM
       "vnet_resource_group_name":"rsg-azusenad-net-01",   <-- Virtual Network Resource Group where the vNet resides
-      "vnet_name":"us-east-dev",                          <-- Virtual Network for the VM to be built on
-      "vnet_subnet_name":"us-east-dev-tier2",             <-- vNet Subnet to use for an Ip address
+      "vnet_name":"us-east-dev",                          <-- Virtual Network the VM to be built on
+      "vnet_subnet_name":"us-east-dev-tier2",             <-- vNet Subnet to use an Ip address from
       "vm_size": "Standard_DS12_v2"                       <-- Azure VM size
   },
 
